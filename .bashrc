@@ -22,3 +22,5 @@ export PATH=~/bin:$PATH
 
 # history
 HISTTIMEFORMAT='%y/%m/%d %H:%M:%S ';
+HISTSIZE=10000
+HISTIGNORE=ls:history
