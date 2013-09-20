@@ -9,5 +9,7 @@
 		while [ $# -gt 0 ]; do s="$s,$1"; shift; done;\
 			curl "http://gitignore.io/api/$s"; }; f"
 
+	st = status
+
 [color]
 	ui = true
