@@ -10,6 +10,12 @@
 			curl "http://gitignore.io/api/$s"; }; f"
 
 	st = status
-
+	co = checkout
+	cm = commit
+	br = branch
+	res = reset
+	l = log
+	di = diff
+	log = log -p
 [color]
 	ui = true
