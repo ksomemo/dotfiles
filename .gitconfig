@@ -17,5 +17,8 @@
 	l = log
 	di = diff
 	log = log -p
+	ad = add
+	ps = push
+	mg = merge
 [color]
 	ui = true
