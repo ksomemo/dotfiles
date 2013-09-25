@@ -74,15 +74,13 @@ function! s:bundle.hooks.on_source(bundle)
 
   function! s:GtestSnippet()
     if (expand("%") =~ ".*Test\.cpp$")
-echo "Gtest"
        NeoSnippetSource ~/.vim/snippets/gtest.snip
      endif
   endfunction
 
   autocmd BufEnter * call s:RailsSnippet()
   autocmd BufEnter * call s:RSpecSnippet()
-  "autocmd BufEnter * call s:GtestSnippet()
-  autocmd BufReadPost * call s:GtestSnippet()
+  autocmd BufEnter * call s:GtestSnippet()
 
 endfunction
 unlet s:bundle
