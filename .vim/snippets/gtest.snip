@@ -1,0 +1,33 @@
+snippet gtest
+abbr gtest code
+  #include ""
+  #include "gtest/gtest.h"
+  `''`
+  class ${1:testTargetClass}Test : public ::testing::Test {
+  protected:
+    ${1:testTargetClass}* sut;
+    `''`
+    ${1:testTargetClass}() {
+    }
+    `''`
+    virtual ~${1:testTargetClass}Test() {
+    }
+    `''`
+    virtual void SetUp() {
+      sut = new ${1:testTargetClass}();
+    }
+    `''`
+    virtual void TearDown() {
+      delete sut;
+    }
+  };
+
+snippet gtcase
+abbr gtest test case
+  TEST_F(${1:testTargetClass}, ${2:testCaseName}) {
+    ${3}
+    actual = sut;
+    expected = ;
+    EXPECT_EQ(actual, expected);
+  }
+

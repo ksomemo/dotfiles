@@ -1,0 +1,49 @@
+snippet snippet-for-snip
+abbr describe '' class end for ruby
+  class ${1:name}
+    ${2}
+  end
+
+alias snippet-for-snip snip4snip
+
+snippet snippet-for-snip2
+abbr describe '' class end for ruby
+  class ${1:name}
+    ${2} aaa
+  end
+
+
+#snippet gtest
+#abbr gtest code
+#  #include ""
+#  #include "gtest/gtest.h"
+#  `''`
+#  class ${1:testTargetClass}Test : public ::testing::Test {
+#  protected:
+#    ${1:testTargetClass}* sut;
+#    `''`
+#    ${1:testTargetClass}() {
+#    }
+#    `''`
+#    virtual ~${1:testTargetClass}Test() {
+#    }
+#    `''`
+#    virtual void SetUp() {
+#      sut = new ${1:testTargetClass}();
+#    }
+#    `''`
+#    virtual void TearDown() {
+#      delete sut;
+#    }
+#  };
+#
+
+snippet gtcace
+abbr gtest test case
+  TEST_F(${1:testTargetClass}, ${2:testCaseName}) {
+    ${3}
+    actual = sut;
+    expected = ;
+    EXPECT_EQ(actual, expected);
+  }
+

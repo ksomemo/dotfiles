@@ -30,6 +30,7 @@ inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<S-TAB>"
 " Plugin key-mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
 
 " SuperTab like snippets behavior.
 " imap <expr><TAB> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -45,6 +46,52 @@ endif
 let g:neosnippet#enable_snipmate_compatibility = 1
 " Tell Neosnippet about the other snippets
 let g:neosnippet#snippets_directory='~/.vim/snippets'
+
+
+" Define dictionary.
+let g:neocomplete#sources#dictionary#dictionaries = {
+  \ 'default' : ''
+  \}
+
+" ファイルのコンテキストに合わせたsnippetリソースの自動判別
+" nnoremap <Space>se :<C-U>NeoSnippetEdit<CR>
+let s:bundle = neobundle#get('neosnippet')
+function! s:bundle.hooks.on_source(bundle)
+  let g:neosnippet#snippets_directory = $HOME . '/.vim/snippets'
+
+  " enable ruby & rails snippet only rails file
+  function! s:RailsSnippet()
+    if exists("b:rails_root") && (&filetype == "ruby")
+      NeoSnippetSource ~/.vim/snippets/rails.snip
+    endif
+  endfunction
+
+  function! s:RSpecSnippet()
+     if (expand("%") =~ "_spec\.rb$") || (expand("%") =~ "^spec.*\.rb$")
+       NeoSnippetSource ~/.vim/snippets/rspec.snip
+     endif
+  endfunction
+
+  function! s:GtestSnippet()
+    if (expand("%") =~ ".*Test\.cpp$")
+echo "Gtest"
+       NeoSnippetSource ~/.vim/snippets/gtest.snip
+     endif
+  endfunction
+
+  autocmd BufEnter * call s:RailsSnippet()
+  autocmd BufEnter * call s:RSpecSnippet()
+  "autocmd BufEnter * call s:GtestSnippet()
+  autocmd BufReadPost * call s:GtestSnippet()
+
+endfunction
+unlet s:bundle
+
+" コマンドの定義 snippetの参考元にあったのでメモしておく
+" command!
+" \ -bang -nargs=*
+" \ MyAutocmd
+" \ autocmd<bang> vimrc <args>
 
 "syntax highright
 syntax on
