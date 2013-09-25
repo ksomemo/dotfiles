@@ -22,3 +22,5 @@
 	mg = merge
 [color]
 	ui = true
+[core]
+	editor = vim
