@@ -7,7 +7,7 @@ abbr gtest code
   protected:
     ${1:testTargetClass}* sut;
     `''`
-    ${1:testTargetClass}() {
+    ${1:testTargetClass}Test() {
     }
     `''`
     virtual ~${1:testTargetClass}Test() {
@@ -24,7 +24,7 @@ abbr gtest code
 
 snippet gtcase
 abbr gtest test case
-  TEST_F(${1:testTargetClass}, ${2:testCaseName}) {
+  TEST_F(${1:testTargetClass}Test, ${2:testCaseName}) {
     ${3}
     actual = sut;
     expected = ;
