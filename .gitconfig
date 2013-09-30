@@ -21,6 +21,7 @@
 	ps = push
 	mg = merge
 	lograph = log --graph --pretty=medium-reverse
+	stash-unstage = git stash save –-keep-index
 [color]
 	ui = true
 [core]
