@@ -26,8 +26,8 @@ snippet gtcase
 abbr gtest test case
   TEST_F(${1:testTargetClass}Test, ${2:testCaseName}) {
     ${3}
-    actual = sut;
-    expected = ;
+    expectedType actual = sut->();
+    expectedType expected = ;
     EXPECT_EQ(actual, expected);
   }
 
