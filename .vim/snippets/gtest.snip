@@ -5,16 +5,16 @@ abbr gtest code
   `''`
   class ${1:testTargetClass}Test : public ::testing::Test {
   protected:
-    ${1:testTargetClass}* sut;
+    $1* sut;
     `''`
-    ${1:testTargetClass}Test() {
+    $1Test() {
     }
     `''`
-    virtual ~${1:testTargetClass}Test() {
+    virtual ~$1Test() {
     }
     `''`
     virtual void SetUp() {
-      sut = new ${1:testTargetClass}();
+      sut = new $1();
     }
     `''`
     virtual void TearDown() {
