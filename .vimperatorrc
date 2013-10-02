@@ -1,0 +1,18 @@
+set hlsearch
+set ignorecase
+
+noremap j 5j
+noremap k 5k
+
+set hintchars=abcdefghijklmnopqrstuvwxyz
+highlight Hint font-size:15px;background-color: #333333;color: #ffffff; font-family: "Monaco", "Century Gothic"; font-weight: bold;
+
+
+" for windows
+" http://d.hatena.ne.jp/chabom/20120514/1336967611
+" -----------------------------------------------------------
+javascript <<EOM
+if ( liberator.has("Windows") ) {
+  io.source("~/vimperator/win/_vimperatorrc", false);
+}
+EOM
