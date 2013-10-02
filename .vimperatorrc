@@ -1,10 +1,22 @@
+" スクロールの端などの際に出るbeepをoff
+set nobeep
+
+" GUI(全て非表示)
+set guioptions=
+
+" 自動入力欄フォーカスを無効化
+set focuscontent
+
 set hlsearch
 set ignorecase
 
-noremap j 5j
-noremap k 5k
+" カーソル移動をカーソルを固定スクロールにして量を増加
+noremap j 5<C-e>
+noremap k 5<C-y>
 
-set hintchars=abcdefghijklmnopqrstuvwxyz
+" hint用設定 キーボード上段のみを使う(jkで移動してしまう癖のため)
+" set hintchars=abcdefghijklmnopqrstuvwxyz
+set hintchars=qwertyuiop
 highlight Hint font-size:15px;background-color: #333333;color: #ffffff; font-family: "Monaco", "Century Gothic"; font-weight: bold;
 
 
