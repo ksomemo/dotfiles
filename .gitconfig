@@ -10,20 +10,33 @@
 			curl "http://gitignore.io/api/$s"; }; f"
 
 	st = status
+
 	co = checkout
+
 	cm = commit
+
 	br = branch
+
 	res = reset
+
 	ft = fetch
+
 	rbs = rebase
-	l = log
+
 	di = diff
-	logp = log -p
+
 	ad = add
+
 	ps = push
+
 	mg = merge
-	lograph = log --graph --pretty=medium-reverse
+
 	stash-unstage = git stash save –-keep-index
+
+	# log
+	l = log
+	logp = log -p
+	lograph = log --graph --pretty=medium-reverse
 [color]
 	ui = true
 [core]
