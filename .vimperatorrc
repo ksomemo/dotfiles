@@ -4,6 +4,13 @@ set focuscontent
 set hlsearch
 set ignorecase
 
+" Windows風
+" <S-Esc>で一時的に無効にして戻す
+" Ctrl+a (全選択)
+noremap <C-a> <S-Esc><C-a><S-Esc>
+inoremap <C-a> <S-Esc><C-a><S-Esc>
+cnoremap <C-a> <S-Esc><C-a><S-Esc>
+
 " カーソル移動をカーソルを固定スクロールにして量を増加
 noremap j 5<C-e>
 noremap k 5<C-y>
