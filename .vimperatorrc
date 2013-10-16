@@ -1,9 +1,3 @@
-" スクロールの端などの際に出るbeepをoff
-set nobeep
-
-" GUI(全て非表示)
-set guioptions=
-
 " 自動入力欄フォーカスを無効化
 set focuscontent
 
