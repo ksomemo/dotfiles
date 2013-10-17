@@ -11,6 +11,9 @@ export PHP_VERSIONS=${HOME}/local/php/versions
 source $(brew --prefix php-version)/php-version.sh && php-version 5.4.9 >/dev/null
 #source $(brew --prefix php-version)/php-version.sh && php-version 5.3.19 >/dev/null
 
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
 export PATH=~/.cabal/bin:$PATH
 
 # git [hub] command to git command
@@ -187,6 +190,6 @@ case ${OSTYPE} in
         #Linux用の設定
         ;;
 esac
- 
+
 # vim:set ft=zsh:
 
