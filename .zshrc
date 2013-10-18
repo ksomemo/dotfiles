@@ -14,6 +14,9 @@ source $(brew --prefix php-version)/php-version.sh && php-version 5.4.9 >/dev/nu
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "${HOME}/.gvm/bin/gvm-init.sh" ]] && source "${HOME}/.gvm/bin/gvm-init.sh"
+
 export PATH=~/.cabal/bin:$PATH
 
 # git [hub] command to git command
