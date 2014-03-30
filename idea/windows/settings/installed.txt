@@ -1,0 +1,4 @@
+com.intellij
+de.netnexus.camelcaseplugin
+JSTestDriver Plugin
+Pomodoro-tm
