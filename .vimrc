@@ -91,7 +91,6 @@ unlet s:bundle
 " \ MyAutocmd
 " \ autocmd<bang> vimrc <args>
 
-"syntax highright
 syntax on
 
 "行番号の表示
