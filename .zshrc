@@ -11,6 +11,9 @@ export PHP_VERSIONS=${HOME}/local/php/versions
 source $(brew --prefix php-version)/php-version.sh && php-version 5.4.9 >/dev/null
 #source $(brew --prefix php-version)/php-version.sh && php-version 5.3.19 >/dev/null
 
+# for python
+source /usr/local/bin/virtualenvwrapper.sh
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
