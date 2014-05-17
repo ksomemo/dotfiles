@@ -20,6 +20,9 @@ export PATH="/usr/local/heroku/bin:$PATH"
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "${HOME}/.gvm/bin/gvm-init.sh" ]] && source "${HOME}/.gvm/bin/gvm-init.sh"
 
+# This loads NVM
+[ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh
+
 export PATH=~/.cabal/bin:$PATH
 
 # git [hub] command to git command
