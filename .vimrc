@@ -112,6 +112,9 @@ set incsearch
 "検索時に大文字小文字を無視する
 set ignorecase
 
+"検索結果のハイライト
+set hlsearch
+
 "対応する括弧のハイライト表示する
 set showmatch
 
