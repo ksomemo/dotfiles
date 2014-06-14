@@ -29,6 +29,9 @@ export PATH=~/.cabal/bin:$PATH
 function git(){hub "$@"}
 # eval "$(hub alias -s)" # bash
 
+# erlang activate
+. ~/erlang/r16b03-1/activate
+
 alias rm='rm -i'
 alias cp='cp -i'
 
