@@ -34,3 +34,5 @@
 * terminal
   * teraterm
   * poderosa
+* diff
+  * WinMerge
