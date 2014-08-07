@@ -36,3 +36,6 @@
   * poderosa
 * diff
   * WinMerge
+* virtual machine
+  * virtual box
+  * vagrant
