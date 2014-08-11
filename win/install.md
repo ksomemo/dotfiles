@@ -53,3 +53,12 @@
 ## virtual machine
 * virtual box
 * vagrant
+
+## database
+* server
+  * sqlite
+* client
+  * a5m2
+
+## http proxy
+* fiddler
