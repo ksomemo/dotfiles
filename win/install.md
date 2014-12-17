@@ -7,6 +7,7 @@
 
 ## mouse gesture
 * かざぐるマウス
+* Mouse Gesture L
 
 ## key map
 * yamy
@@ -24,12 +25,12 @@
 * PyCharm
 
 ## vcs
-  * msysgit
-  * source tree
-  * tortoise SVN
+* msysgit
+* source tree
+* tortoise SVN
 
 ## clipboad
-  * clipnote
+* clipnote
 
 ## browser
 * chrome
