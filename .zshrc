@@ -205,7 +205,7 @@ case ${OSTYPE} in
     darwin*)
         #Mac用の設定
         export CLICOLOR=1
-        alias ls='ls -G -F'
+        alias ls='ls -G'
         ;;
     linux*)
         #Linux用の設定
