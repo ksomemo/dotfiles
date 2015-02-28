@@ -33,6 +33,9 @@ function git(){hub "$@"}
 # erlang activate
 . ~/erlang/r16b03-1/activate
 
+function google-search() {
+	open -a Google\ Chrome "http://google.co.jp/search?q=$1"
+}
 
 # phpbrew
 source $HOME/.phpbrew/bashrc
