@@ -5,12 +5,6 @@ export PATH=/usr/local/bin:$PATH  # for Homebrew
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-export PHP_HOME=$HOME/local/php/versions
-export PHP_VERSIONS=${HOME}/local/php/versions
-
-source $(brew --prefix php-version)/php-version.sh && php-version 5.4.9 >/dev/null
-#source $(brew --prefix php-version)/php-version.sh && php-version 5.3.19 >/dev/null
-
 # for python
 source /usr/local/bin/virtualenvwrapper.sh
 
@@ -31,6 +25,11 @@ function git(){hub "$@"}
 
 # erlang activate
 . ~/erlang/r16b03-1/activate
+
+
+# phpbrew
+source $HOME/.phpbrew/bashrc
+export PHPBREW_SET_PROMPT=1
 
 alias rm='rm -i'
 alias cp='cp -i'
