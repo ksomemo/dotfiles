@@ -22,6 +22,10 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 export PATH=~/.cabal/bin:$PATH
 
+# HDF5
+export HDF5_DIR=/usr/local/hdf5
+export PATH=$HDF5_DIR/bin:$PATH
+
 # git [hub] command to git command
 function git(){hub "$@"}
 # eval "$(hub alias -s)" # bash
