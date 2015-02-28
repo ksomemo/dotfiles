@@ -42,5 +42,10 @@
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore_global
+	autocrlf = false
 [pretty]
 	medium-reverse = format:'%C(red reverse)%d%Creset%C(white reverse) %h% Creset %C(green reverse) %an %Creset %C(cyan)%ar%Creset%n%C(white bold)%w(80)%s%Creset%n%n%w(80,2,2)%b'
+[filter "media"]
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true
