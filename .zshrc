@@ -15,7 +15,10 @@ export PATH="/usr/local/heroku/bin:$PATH"
 [[ -s "${HOME}/.gvm/bin/gvm-init.sh" ]] && source "${HOME}/.gvm/bin/gvm-init.sh"
 
 # This loads NVM
-[ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh
+# [ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh
+
+# nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 export PATH=~/.cabal/bin:$PATH
 
