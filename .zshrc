@@ -1,46 +1,83 @@
 export PATH=~/bin:$PATH
+export PATH=/usr/local/bin:$PATH # for Homebrew
 export PATH=/usr/local/sbin:$PATH # for Homebrew
-export PATH=/usr/local/bin:$PATH  # for Homebrew
+export PATH=/usr/local/opt/openssl/bin:$PATH # for Homebrew openssl
+export PATH=~/.local/bin:$PATH # stack etc
 
+export EDITOR=vim
+
+# gnu coreutils
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+
+# direnv
+eval "$(direnv hook zsh)"
+
+# ruby
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 # for python
-source /usr/local/bin/virtualenvwrapper.sh
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# java
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+# spark
+export SPARK_HOME="/usr/local/Cellar/apache-spark/2.1.0/libexec/"
+
+# You can use $SBT_OPTS to pass additional JVM options to SBT:
+export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
+
+# Rust
+export PATH=~/.cargo/bin:$PATH
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "${HOME}/.gvm/bin/gvm-init.sh" ]] && source "${HOME}/.gvm/bin/gvm-init.sh"
-
+# node
 # This loads NVM
 # [ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh
-
-# nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
+# Haskell
 export PATH=~/.cabal/bin:$PATH
+if which stack > /dev/null; then
+    alias ghc="stack ghc --"
+    alias ghci="stack ghci"
+    alias runghc="stack runghc --"
+    alias runhaskell="stack runghc --"
+    alias ghc-pkg="stack exec ghc-pkg --"
+fi
 
 # HDF5
 export HDF5_DIR=/usr/local/hdf5
 export PATH=$HDF5_DIR/bin:$PATH
 
+# git
 # git [hub] command to git command
 function git(){hub "$@"}
 # eval "$(hub alias -s)" # bash
 
-# erlang activate
-. ~/erlang/r16b03-1/activate
+# sqlite3
+export PATH=/usr/local/opt/sqlite/bin:$PATH
 
 function google-search() {
 	open -a Google\ Chrome "http://google.co.jp/search?q=$1"
 }
 
-# phpbrew
+# php
 source $HOME/.phpbrew/bashrc
 export PHPBREW_SET_PROMPT=1
 
+# golang
+export GOPATH=~/golang/gopath
+export GOROOT=/usr/local/opt/go/libexec/
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+
+# basic command
 alias rm='rm -i'
 alias cp='cp -i'
 
@@ -213,4 +250,16 @@ case ${OSTYPE} in
 esac
 
 # vim:set ft=zsh:
+
+# pip zsh completion start
+function _pip_completion {
+  local words cword
+  read -Ac words
+  read -cn cword
+  reply=( $( COMP_WORDS="$words[*]" \
+             COMP_CWORD=$(( cword-1 )) \
+             PIP_AUTO_COMPLETE=1 $words[1] ) )
+}
+compctl -K _pip_completion pip
+# pip zsh completion end
 

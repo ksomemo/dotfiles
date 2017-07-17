@@ -138,7 +138,8 @@ match ZenkakuSpace /　/
 
 " 記号系の表示
 set list
-set listchars=tab:»\ ,trail:-,nbsp:%,extends:»,precedes:«,eol:↲
+" set listchars=tab:»\ ,trail:-,nbsp:%,extends:»,precedes:«,eol:↲
+set listchars=tab:»\ ,trail:-,nbsp:%,extends:»,precedes:«
 
 " ファイル保存時の事前動作
 function! s:remove_dust()
@@ -156,8 +157,8 @@ autocmd BufWritePre * call <SID>remove_dust()
 imap <C-j>  <ESC>
 
 " 行頭・行末移動方向をキーの相対位置にあわせる
-nnoremap 0 $ 
-nnoremap 1 0 
+nnoremap 0 $
+nnoremap 1 0
 
 " 挿入モードでのカーソル移動
 inoremap <C-j> <Down>
