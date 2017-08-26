@@ -97,6 +97,10 @@ export PGDATA=/usr/local/var/lib/pgsql/data
 alias rm='rm -i'
 alias cp='cp -i'
 
+alias ll='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+
 # 少し凝った zshrc
 
 ########################################
@@ -220,18 +224,6 @@ bindkey '^R' history-incremental-pattern-search-backward
 
 ########################################
 # エイリアス
-
-alias la='ls -a'
-alias ll='ls -l'
-
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
-
-alias mkdir='mkdir -p'
-
-# sudo の後のコマンドでエイリアスを有効にする
-alias sudo='sudo '
 
 # グローバルエイリアス
 alias -g L='| less'
