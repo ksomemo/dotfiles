@@ -67,6 +67,20 @@ function google-search() {
 	open -a Google\ Chrome "http://google.co.jp/search?q=$1"
 }
 
+# google-cloud-sdk
+export CLOUDSDK_PYTHON="$(which python2.7)"
+# modified path and completion
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then
+    source "$HOME/google-cloud-sdk/path.zsh.inc"
+fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then
+    source "$HOME/google-cloud-sdk/completion.zsh.inc"
+fi
+
+
 # php
 source $HOME/.phpbrew/bashrc
 export PHPBREW_SET_PROMPT=1
