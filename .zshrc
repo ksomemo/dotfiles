@@ -90,6 +90,8 @@ export GOPATH=~/golang/gopath
 export GOROOT=/usr/local/opt/go/libexec/
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
+# Postgresql
+export PGDATA=/usr/local/var/lib/pgsql/data
 
 # basic command
 alias rm='rm -i'
