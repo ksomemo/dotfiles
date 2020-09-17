@@ -1,6 +1,6 @@
 [user]
 	name = ksomemo
-	email = kntsmy@hotmail.co.jp
+	email = dummy
 [merge]
 	ff = false
 
@@ -43,6 +43,7 @@
 	editor = vim
 	excludesfile = ~/.gitignore_global
 	autocrlf = false
+	# 文字化け回避: git config --global core.quotepath false
 	quotepath = false
 [pretty]
 	medium-reverse = format:'%C(red reverse)%d%Creset%C(white reverse) %h% Creset %C(green reverse) %an %Creset %C(cyan)%ar%Creset%n%C(white bold)%w(80)%s%Creset%n%n%w(80,2,2)%b'
